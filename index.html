@@ -12,6 +12,8 @@
 <button onclick="sendValueToIOS()">Click me</button>
 
     <script>
+    	sendValueToIOS()
+
     	function sendValueToIOS() {
             window.webkit.messageHandlers.iOSNative.postMessage("Test text bla bla bla");
         }
