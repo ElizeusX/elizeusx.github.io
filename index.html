@@ -9,7 +9,14 @@
     
 <h1>TEST</h1>
 
+<button onclick="sendValueToIOS()">Click me</button>xs
+
     <script>
+    	function sendValueToIOS() {
+            window.webkit.messageHandlers.iOSNative.postMessage("Test text bla bla bla");
+        }
+
+    	
         function myFunc(color) {
             alert("It is working");
             document.body.style.backgroundColor = color;
@@ -17,5 +24,6 @@
 
         myFunc();
     </script>
+
 </body>
 </html>
