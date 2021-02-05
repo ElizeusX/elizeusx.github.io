@@ -9,9 +9,13 @@
     
 <h1>TEST</h1>
 
-<button onclick="sendValueToIOS(), sendValue2ToIOS()">Click me</button>
+<button onclick="allFunc()">Click me</button>
 
     <script>
+    	function allFunc() {
+    		function sendValueToIOS()
+    		function sendValue2ToIOS()
+    	}
 
     	function sendValueToIOS() {
             window.webkit.messageHandlers.iOSNative.postMessage("Test text bla bla bla");
