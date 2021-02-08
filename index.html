@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+             sendValueToIOS()
+             sendValue2ToIOS()
+        
+
+        function sendValueToIOS() {
+            window.webkit.messageHandlers.iOSNative.postMessage("Test text bla bla bla");
+        }
+        function sendValue2ToIOS() {
+            window.webkit.messageHandlers.iOSNative2.postMessage();
+        }
+
+        window.PacketaPPAEvents = {
+
+             myFunc: (color) => {
+                alert("It is working");
+                document.body.style.backgroundColor = color;
+            }
+        }
+
+
+
+       window.PacketaPPAEvents.myFunc();
+    </script>
 </head>
 <body>
     
@@ -11,29 +36,7 @@
 
 <button onclick="sendValue2ToIOS()">Click me</button>
 
-    <script>
-    		 sendValueToIOS()
-    		 sendValue2ToIOS()
-    	
-
-    	function sendValueToIOS() {
-            window.webkit.messageHandlers.iOSNative.postMessage("Test text bla bla bla");
-        }
-        function sendValue2ToIOS() {
-            window.webkit.messageHandlers.iOSNative2.postMessage();
-        }
-
-    	window.PacketaPPAEvents = {
-
-         myFunc: (color) => {
-            alert("It is working");
-            document.body.style.backgroundColor = color;
-        }
-        }
-
-
-  //      myFunc();
-    </script>
+    
 
 </body>
 </html>
